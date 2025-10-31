@@ -1,0 +1,371 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  flex: 1;
+  margin-top: 20px;
+}
+.navbar {
+  height: 4rem;
+  display: flex;
+  width: 100%;
+  align-self: center;
+  background-color: white !important;
+  box-shadow: 0 2px 2px #333;
+}
+
+.fa-airbnb {
+  color: #e83253;
+  font-size: 2.5rem;
+  line-height: 2rem;
+}
+.navbar-brand i {
+  margin-top: 2px;
+  padding-left: 10px;
+  font-size: 2rem;
+}
+.nav-link {
+  color: #333 !important;
+  font-weight: 500 !important;
+}
+.navbar-toggler {
+  box-shadow: none;
+}
+.navbar-toggler:active,
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.navbar-collapse {
+  background-color: #fff !important; /* Apply background color to the expanded menu */
+}
+
+/* Using filter for find every listing based on that filter */
+
+#filters {
+  margin-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.7rem;
+}
+.filter {
+  text-decoration: none;
+  color: #333;
+  opacity: 0.7;
+}
+
+.filter:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.tax-info {
+  display: none;
+}
+.tax-toggle {
+  height: 3rem;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #a7a6a6;
+  border-radius: 0.5rem;
+}
+
+/* search button in index file */
+
+.search-input {
+  width: 400px !important;
+  border-radius: 30px !important;
+  margin-left: 200px !important;
+  padding: 0.5rem 3rem 0.5rem 1rem !important;
+  font-size: 1rem !important;
+}
+.search-btn {
+  color: #fff !important;
+  height: 2.5rem !important;
+  background-color: #e83253 !important;
+  border-radius: 30px !important;
+  padding: 0 1rem 0 1rem !important;
+}
+.search-btn i {
+  display: inline;
+  margin-right: 0.5rem;
+}
+/* Footer */
+
+.f-info {
+  text-align: center;
+  display: flex;
+  height: 8rem;
+  background-color: #e2e8f0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
+.f-info-links a {
+  text-decoration: none;
+  color: #333;
+}
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-info-socials i {
+  font-size: 1.4rem;
+  margin-right: 1rem;
+}
+
+/* cards */
+
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+}
+
+.card-image-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 0;
+}
+.card-text p {
+  font-weight: 500 !important;
+}
+
+.listing-link {
+  text-decoration: none;
+}
+
+/* Card effect */
+
+.card-img-overlay {
+  opacity: 0;
+}
+
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+/* New Page */
+
+.add-btn {
+  background-color: #e83253 !important;
+  border: none !important;
+  border: 20px !important;
+}
+
+/* Edit page */
+
+.edit-btn {
+  background-color: #e83253 !important;
+  border: none !important;
+  border: 20px !important;
+  width: 100px !important;
+}
+
+/* Show Page  */
+
+.show-img {
+  max-width: 100%;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-left: 1.7rem; /* keeps desktop spacing */
+}
+.show-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+.owner {
+  font-weight: 500;
+  color: dodgerblue;
+}
+#map {
+  margin: 10px 0px 50px 0px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 700px;
+  height: 60vh;
+  box-sizing: border-box;
+}
+/* Responsive */
+
+@media (max-width: 768px) {
+  .sign-title,
+  .log-title {
+    font-size: 1.5rem !important;
+  }
+  .navbar-collapse {
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+  .search-input {
+    width: 200px !important;
+    margin-left: 0px !important;
+  }
+
+  /* Stack Bootstrap columns full width on small screens */
+  [class*="col-"] {
+    -ms-flex: 0 0 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Remove offsets used for centering on desktop so content fills the width */
+  .offset-3,
+  .offset-2,
+  .offset-5,
+  .ms-3 {
+    margin-left: 0 !important;
+  }
+
+  /* Forms: padding and full-width inputs/buttons */
+  form.needs-validation {
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+  form .form-control,
+  textarea.form-control {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  form button,
+  .btn {
+    width: 100% !important;
+    display: block;
+  }
+
+  /* Listing/show images and cards: responsive and stack */
+  .show-img,
+  img.card-img-top {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+    max-height: 320px;
+  }
+  .card.col-6,
+  .card.col-5,
+  .card.col-8 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* Review cards and listing cards stack and get comfortable spacing */
+  .card.mt-4.mb-4.ms-3.col-5 {
+    margin: 0.5rem 0 !important;
+    width: 100% !important;
+  }
+  .btns {
+    margin-left: 0 !important;
+    padding: 0 1rem;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  .edit-btn,
+  .delete-btn {
+    width: auto !important; /* let buttons size naturally on mobile */
+    min-width: 120px;
+  }
+
+  /* Map: reasonable mobile height */
+  #map {
+    height: 280px !important;
+    width: 100% !important;
+    margin: 0.5rem 0;
+  }
+  .show-img {
+    max-height: 320px;
+  }
+
+  /* Headings and spacing adjustments */
+  .sign-title,
+  .log-title,
+  h3 {
+    font-size: 1.4rem !important;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  .card-body {
+    padding: 0.75rem;
+  }
+  .owner {
+    display: inline-block;
+    word-break: break-word;
+  }
+  .btns {
+    display: flex;
+    gap: 10px !important;
+  }
+  .edit-btn,
+  .delete-btn {
+    width: 100px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Tighter adjustments for smaller phones */
+  .sign-title,
+  .log-title {
+    width: 100% !important;
+    margin-bottom: 3.5rem !important;
+    font-size: 1.5rem !important;
+  }
+  .show-title {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+    font-size: 1.5rem !important;
+  }
+  .btns {
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  .edit-btn,
+  .delete-btn {
+    width: 100px !important;
+  }
+  h3 {
+    font-size: 1.1rem !important;
+  }
+  #map {
+    height: 220px !important;
+  }
+  .show-img {
+    max-height: 220px !important;
+  }
+  .starability-slot label {
+    font-size: 0.9rem;
+  }
+  .card-body p {
+    font-size: 0.95rem;
+  }
+  .form-control {
+    padding: 0.45rem 0.6rem;
+  }
+}
