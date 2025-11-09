@@ -49,7 +49,7 @@ const listingSchema = new Schema({
     type: String,
     enum: [
       "Trending",
-      "Rooms",
+      "Rooms",	
       "Iconic Cities",
       "Mountain",
       "Arctic pool",
